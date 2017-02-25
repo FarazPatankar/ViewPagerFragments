@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ScheduleFragment.OnTextSubmittedListener{
     public Fragment selectedFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,5 +40,17 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                 });
+    }
+
+    @Override
+    public void onTextSubmitted(String user_input) {
+        MusicFragment musicFragment = new MusicFragment();
+        Bundle args = new Bundle();
+        args.putString(MusicFragment.ARG_INPUT, user_input);
+        musicFragment.setArguments(args);
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content_container, musicFragment);
+        ft.commit();
     }
 }

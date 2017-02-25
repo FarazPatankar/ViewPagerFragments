@@ -2,13 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.farazpatankar.l2frag.FirstFragment">
+    tools:context="com.example.farazpatankar.l2frag.FirstFragment"
+    android:id="@+id/first_fragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:id="@+id/find_me"/>
+        android:id="@+id/find_me"
+        android:textSize="50dp"/>
 
 </FrameLayout>

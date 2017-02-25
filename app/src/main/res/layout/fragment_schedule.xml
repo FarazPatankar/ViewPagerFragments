@@ -1,13 +1,30 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.farazpatankar.l2frag.ScheduleFragment">
+    tools:context="com.example.farazpatankar.l2frag.ScheduleFragment"
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="126dp"
+        android:text="kuch likho please"
+        android:textSize="50dp"/>
 
-</FrameLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="0.11"
+        android:id="@+id/user_input"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:text="SUBMIT"
+        android:layout_gravity="center"
+        android:id="@+id/submit_input"/>
+
+</LinearLayout>
